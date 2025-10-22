@@ -1,2 +1,4 @@
 Flask-RESTful
 Flask-SQLAlchemy
+requests
+flask-restx
