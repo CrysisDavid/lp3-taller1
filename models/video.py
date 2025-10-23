@@ -28,3 +28,37 @@ class VideoModel(db.Model):
         """
         return f"Video(id={self.id}, name={self.name}, views={self.views}, likes={self.likes})"
 
+    def create(self):
+        """
+        Método de clase para crear un nuevo video
+        
+        Args:
+            name (str): Nombre del video
+            views (int): Número de vistas
+            likes (int): Número de likes
+            
+        Returns:
+            VideoModel: El video creado
+        """
+        db.session.add(self)
+        db.session.commit()
+        return self
+    
+
+    @classmethod
+    def save(cls):
+        db.session.commit()
+        print(cls)
+
+    @classmethod
+    def edit(cls, name, views, likes):
+        video = cls(name=name, views=views, likes=likes)
+        db.session.add(video)
+        db.session.commit()
+        return video
+    
+
+    @classmethod
+    def delete(cls, video):
+        db.session.delete(video)
+        db.session.commit()
