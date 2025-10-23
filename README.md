@@ -2,6 +2,9 @@
 
 Esta es una API RESTful para gestión de videos, desarrollada con Flask, Flask-RESTful y SQLAlchemy.
 
+## Autor
+- Nombre: Cristian Solis - [GitHub](https://github.com/CrysisDavid)
+
 ## Descripción
 
 El proyecto implementa una API simple para gestionar información sobre videos, permitiendo:
